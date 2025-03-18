@@ -20,7 +20,8 @@ Although this happens only in edge cases, it would be helpful to bypass the defa
    npm run dev
    ```
 4. Open [http://localhost:3000](http://localhost:3000) in your browser
-5. Observe that the global styling features don't work as expected:
+5. Observe that the global styling features don't work as expected: ![pure-error once view-transition styles are used](https://github.com/user-attachments/assets/5d69b1c7-81e8-486c-9d6d-707804455681)
+
 
 ## The Issue
 
