@@ -1,0 +1,31 @@
+.transitionDemo {
+  padding: 1rem;
+  border: 1px solid #eaeaea;
+  border-radius: 5px;
+  margin: 1rem 0;
+  background-color: #f9f9f9;
+}
+
+/* View Transitions API - requires global scope to work properly */
+/* cssmodules-pure-no-check */
+::view-transition-old(root) {
+  animation: 300ms cubic-bezier(0.4, 0, 0.2, 1) both fade-out;
+}
+
+::view-transition-new(root) {
+  animation: 300ms cubic-bezier(0.4, 0, 0.2, 1) both fade-in;
+}
+
+@keyframes fade-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* With CSS Modules, these styles get scoped to the component,
+   breaking the View Transitions API which requires global application.
+   The cssmodules-pure-no-check directive would allow these to apply globally. */
